@@ -1,0 +1,17 @@
+- file: amsterdam_01.jpg
+  folder: city
+  title: Amsterdam
+  caption: Canal edge, evening light
+  year: 2024
+
+- file: porto_02.jpg
+  folder: city
+  title: Porto
+  caption: Hills and river
+  year: 2024
+
+- file: detail_01.jpg
+  folder: details
+  title: Joint Study
+  caption: Threshold and shadow
+  year: 2025
