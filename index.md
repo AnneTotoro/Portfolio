@@ -12,7 +12,7 @@
 <body>
 
   <nav id="nav">
-    <a href="index.html" class="nav-name">Your Name</a>
+    <a href="index.html" class="nav-name">Aiko Hayashi</a>
     <ul class="nav-links">
       <li><a href="index.html" class="active" data-en="About" data-ja="概要">About</a></li>
       <li><a href="architecture.html" data-en="Architecture" data-ja="建築">Architecture</a></li>
