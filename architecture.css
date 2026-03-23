@@ -5,7 +5,9 @@
 
 .arch-gallery {
   padding: 2rem 2.5rem 4rem;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+:root {
+  --font-display : 'Bebas Neue', Impact, sans-serif; /* 番号・ブランド名 */
+  --font-body    : 'Helvetica Neue', Helvetica, Arial, sans-serif; /* キャプション等 */
 }
 
 .arch-gallery__brand {
