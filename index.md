@@ -26,11 +26,11 @@
     <section class="about-text">
       <h1 class="page-title">Aiko Hayashi</h1>
       <p class="subtitle">
-        <span data-en="Architect · Researcher · Photographer" data-ja="建築家・研究者・写真家">Architect · Researcher · Photographer</span>
+        <span data-en="Architect · Researcher · Photographer" data-ja="建築学生">Architectecture Student</span>
       </p>
 
       <div class="bio">
-        <p><span data-en="I am a designer and researcher exploring the intersection of built space, human experience, and emerging technology. Currently based in [City], working at [Firm / Institution]." data-ja="私は建築空間・人間の経験・新興技術の交差点を探求するデザイナー・研究者です。現在は[都市]を拠点に、[組織/事務所]に所属しています。">I am a designer and researcher exploring the intersection of built space, human experience, and emerging technology. Currently based in [City], working at [Firm / Institution].</span></p>
+        <p><span data-en="I am an architecture student at the Georgia Institute of Technology in the United States. I have strong interests in urban science, urban homogenization, and architectural design, and I am currently based in Tokyo and Atlanta." data-ja="Georgia Institute of Technology, USAに通う建築学生２年。Urban Science,都市の均質化, 建築設計に強い関心があり、現在は東京、アトランタを拠点に活動。">I am a designer and researcher exploring the intersection of built space, human experience, and emerging technology. Currently based in [City], working at [Firm / Institution].</span></p>
         <p><span data-en="My architectural practice focuses on [your focus area]. My research investigates [research topic]. Between projects, I document the world through photography." data-ja="建築実践では[専門分野]を中心に取り組み、研究では[研究テーマ]を探求しています。プロジェクトの合間には、写真で世界を記録しています。">My architectural practice focuses on [your focus area]. My research investigates [research topic]. Between projects, I document the world through photography.</span></p>
       </div>
 
