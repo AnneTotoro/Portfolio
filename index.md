@@ -44,9 +44,9 @@
       <div class="contact-line">
         <a href="your-cv.pdf" target="_blank">CV</a>
         <span class="sep">·</span>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://github.com/Annetotoro" target="_blank">GitHub</a>
         <span class="sep">·</span>
-        <a href="mailto:you@email.com">Email</a>
+        <a href="mailto:aiko.hayashi2005@email.com">Email</a>
       </div>
     </section>
     <aside class="about-image">
