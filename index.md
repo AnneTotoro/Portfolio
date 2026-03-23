@@ -66,7 +66,7 @@
 </head>
 <body>
   <nav id="nav">
-    <a href="index.html" class="nav-name">Aiko Hayashi</a>
+    <a href="index.html" class="nav-name" data-en="Aiko Hayashi" data-ja="林愛子”>Aiko Hayashi</a>
     <ul class="nav-links">
       <li><a href="index.html" class="active" data-en="About" data-ja="About">About</a></li>
       <li><a href="architecture.html" data-en="Works" data-ja="Works">Architecture</a></li>
