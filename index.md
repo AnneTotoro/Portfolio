@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Portfolio</title>
+  <title>Aiko Hayashi — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +24,7 @@
 
   <main class="about-layout">
     <section class="about-text">
-      <h1 class="page-title">Your Name</h1>
+      <h1 class="page-title">Aiko Hayashi</h1>
       <p class="subtitle">
         <span data-en="Architect · Researcher · Photographer" data-ja="建築家・研究者・写真家">Architect · Researcher · Photographer</span>
       </p>
@@ -66,7 +66,7 @@
     </div>
   </section>
 
-  <footer><span>© <span id="year"></span> Your Name</span></footer>
+  <footer><span>© <span id="year"></span> Aiko Hayashi</span></footer>
   <script src="main.js"></script>
 </body>
 </html>
