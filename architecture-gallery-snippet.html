@@ -1,0 +1,58 @@
+<!-- =========================================
+     既存ページへの組み込み用スニペット
+     
+     使い方:
+     1. <link> を <head> 内に追加
+     2. HTML スニペットを貼り付けたい場所に追加
+     3. <script> を </body> の直前に追加
+     4. IMAGES 配列に画像パスを入力
+     ========================================= -->
+
+
+<!-- STEP 1: <head> に追加 -->
+<link rel="stylesheet" href="architecture-gallery.css" />
+
+
+<!-- STEP 2: 表示したい場所に追加 -->
+<section class="arch-gallery">
+  <p class="arch-gallery__brand">Architecture</p>
+  <div class="arch-gallery__grid" id="arch-gallery-grid"></div>
+</section>
+
+
+<!-- STEP 3: </body> の直前に追加 -->
+<script>
+  /* =========================================
+     画像の管理はここだけ
+     
+     src     — 画像パス (例: "./images/arch-01.jpg" or "https://...")
+     caption — キャプション（不要なら "" に）
+     
+     行を増やす → 項目が増える
+     行を削除  → 項目が消える
+     ========================================= */
+  const ARCH_IMAGES = [
+    { src: "./images/arch-01.jpg", caption: "" },
+    { src: "./images/arch-02.jpg", caption: "" },
+    { src: "./images/arch-03.jpg", caption: "" },
+    { src: "./images/arch-04.jpg", caption: "" },
+  ];
+
+  /* 以下は編集不要 */
+  const grid = document.getElementById("arch-gallery-grid");
+  ARCH_IMAGES.forEach((item, i) => {
+    const num = String(i + 1).padStart(2, "0");
+    const div = document.createElement("div");
+    div.className = "arch-gallery__item";
+    div.innerHTML = `
+      <div class="arch-gallery__number">${num}</div>
+      <div class="arch-gallery__img-wrap">
+        ${item.src
+          ? `<img src="${item.src}" alt="${item.caption || `Image ${num}`}" loading="lazy" />`
+          : `<div class="arch-gallery__placeholder"><span>No image</span></div>`}
+      </div>
+      ${item.caption ? `<p class="arch-gallery__caption">${item.caption}</p>` : ""}
+    `;
+    grid.appendChild(div);
+  });
+</script>

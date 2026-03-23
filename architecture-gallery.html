@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architecture</title>
+  <style>
+    /* =========================================
+       ARCHITECTURE GALLERY — 画像追加ガイド
+       
+       画像を追加するには:
+       1. 下の IMAGES 設定を編集する
+       2. src に画像パスを入力 (例: "./photos/01.jpg")
+       3. alt にキャプションを入力（任意）
+       ========================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    .page {
+      padding: 2rem 2.5rem 4rem;
+    }
+
+    .brand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 3.5rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0 1.5rem;
+    }
+
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-item .number {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      line-height: 1;
+    }
+
+    .gallery-item .img-wrap {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background: #e8e8e8;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* 画像がない場合のプレースホルダー */
+    .gallery-item .img-wrap .placeholder {
+      width: 100%;
+      height: 100%;
+      background: #e8e8e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-item .img-wrap .placeholder span {
+      font-size: 11px;
+      color: #aaa;
+      letter-spacing: 0.05em;
+    }
+
+    .gallery-item .caption {
+      font-size: 11px;
+      color: #888;
+      margin-top: 0.5rem;
+      letter-spacing: 0.03em;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="brand">Architecture</div>
+    <div class="gallery-grid" id="gallery"></div>
+  </div>
+
+  <script>
+    /* =========================================
+       ここを編集して画像を管理してください
+       
+       各項目:
+         src     — 画像パス（空白 "" でプレースホルダー表示）
+         caption — 画像下のキャプション（不要なら "" に）
+       
+       項目を増やすには { src: "...", caption: "..." } を追加
+       項目を減らすには行ごと削除
+       ========================================= */
+    const IMAGES = [
+      { src: "", caption: "" },
+      { src: "", caption: "" },
+      { src: "", caption: "" },
+      { src: "", caption: "" },
+    ];
+
+    /* =========================================
+       以下は編集不要です
+       ========================================= */
+    const gallery = document.getElementById("gallery");
+
+    IMAGES.forEach((item, i) => {
+      const num = String(i + 1).padStart(2, "0");
+
+      const el = document.createElement("div");
+      el.className = "gallery-item";
+
+      const imgContent = item.src
+        ? `<img src="${item.src}" alt="${item.caption || `Image ${num}`}" loading="lazy" />`
+        : `<div class="placeholder"><span>No image</span></div>`;
+
+      const captionContent = item.caption
+        ? `<p class="caption">${item.caption}</p>`
+        : "";
+
+      el.innerHTML = `
+        <div class="number">${num}</div>
+        <div class="img-wrap">${imgContent}</div>
+        ${captionContent}
+      `;
+
+      gallery.appendChild(el);
+    });
+  </script>
+</body>
+</html>
