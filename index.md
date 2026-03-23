@@ -39,6 +39,32 @@
       </p>
       <div class="bio">
         <p><span data-en="I am an architecture student at the Georgia Institute of Technology in the United States. I have strong interests in urban science, urban homogenization, and architectural design, and I am currently based in Tokyo and Atlanta." data-ja="Georgia Institute of Technology, USAに通う建築学生２年。Urban Science,都市の均質化, 建築設計に強い関心があり、現在は東京、アトランタを拠点に活動。">I am a designer and researcher exploring the intersection of built space, human experience, and emerging technology. Currently based in [City], working at [Firm / Institution].</span></p>
+        <div class="awards">
+        <h2 class="awards-title" data-en="Awards" data-ja="受賞歴">Awards</h2>
+          <div class="award-item">
+          <div class="award-header">
+            <span class="award-name" data-en="Yanai Tadashi Foundation Scholar" data-ja="柳井正財団 海外奨学金プログラム">Yanai Tadashi Foundation Scholar</span>
+            <span class="award-date">Jul 2024</span>
+          </div>
+          <p class="award-issuer" data-en="Yanai Tadashi Foundation" data-ja="柳井正財団">Yanai Tadashi Foundation</p>
+          <p class="award-desc" data-en="Granted full college funding $10,500 / year." data-ja="柳井正財団より年間$10,500の全額奨学金を授与。">Granted full college funding $10,500 / year.</p>
+        </div>
+          <div class="award-item">
+          <div class="award-header">
+            <span class="award-name" data-en="1st Prize — Mainabi Career Koshien 2022" data-ja="マイナビキャリア甲子園2022 優勝">1st Prize — Mainabi Career Koshien 2022</span>
+            <span class="award-date">Mar 2023</span>
+          </div>
+          <p class="award-issuer" data-en="Mainabi Career Koshien" data-ja="マイナビキャリア甲子園">Mainabi Career Koshien</p>
+          <p class="award-desc" data-en="Awarded for proposing the most innovative and feasible business idea out of 2,318 teams. Proposed emobby, a cloud service that visualizes a city's individuality and creates spaces for youth." data-ja="2318チームの中で最も革新的かつ実現可能なビジネスアイデアとして優勝。都市の個性を可視化し若者の居場所を創るクラウドサービス「emobby」を提案。">Awarded for proposing the most innovative and feasible business idea out of 2,318 teams. Proposed emobby, a cloud service that visualizes a city's individuality and creates spaces for youth.</p>
+        </div>
+        <div class="award-item">
+          <div class="award-header">
+            <span class="award-name" data-en="Gold Medal — DOCOMOMO Japan" data-ja="DOCOMOMO Japan 金賞">Gold Medal — DOCOMOMO Japan</span>
+            <span class="award-date">Aug 2021</span>
+          </div>
+          <p class="award-issuer" data-en="DOCOMOMO Japan" data-ja="DOCOMOMO Japan">DOCOMOMO Japan</p>
+          <p class="award-desc" data-en="Awarded for the best architectural design proposal of Daikanyama Hillside Terrace." data-ja="代官山ヒルサイドテラスの建築設計提案において最優秀賞を受賞。">Awarded for the best architectural design proposal of Daikanyama Hillside Terrace.</p>
+        </div>
       </div>
       <div class="contact-line">
         <a href="your-cv.pdf" target="_blank">CV</a>
