@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aiko Hayashi — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav id="nav">
+    <a href="index.html" class="nav-name" data-en="Aiko Hayashi" data-ja="林 愛子">Aiko Hayashi</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active" data-en="About" data-ja="About">About</a></li>
+        <li><a href="architecture.html" data-en="Architecture" data-ja="建築">Architecture</a></li>
+        <li><a href="research.html" data-en="Research" data-ja="研究">Research</a></li>
+        <li><a href="blog.html" data-en="Blog" data-ja="ブログ">Blog</a></li>
+        <li><a href="photography.html" data-en="Photography" data-ja="写真">Photography</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">JP</button>
+    </div>
+  </nav>
 
+  <main class="about-layout">
+    <section class="hero">
+      <div class="hero-info">
+        <div class="portrait-image">
+          <img src="images/portrait.jpeg" alt="Portrait of Aiko Hayashi">
+        </div>
+
+        <div class="hero-text">
+          <h1 class="page-title">Aiko Hayashi</h1>
+          <p class="subtitle" data-en="Architecture Student" data-ja="建築学生">Architecture Student</p>
+          <p class="bio">
+            <span data-en="I am an undergraduate architecture student at the Georgia Institute of Technology, based between Atlanta and Tokyo. My interests span urban science, urban homogenization, architectural theory, and design." data-ja="建築学部３回生、ジョージア工科大学（アメリカ）学士過程在籍。興味はUrban Science、都市の均質化、建築設計に渡り、東京とアトランタにて活動。">I am an undergraduate architecture student at the Georgia Institute of Technology, based between Atlanta and Tokyo. My interests span urban science, urban homogenization, architectural theory, and design.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-main-image">
+        <img src="images/model.png" alt="Architecture model by Aiko Hayashi">
+      </div>
+    </section>
+
+    <section class="news">
+      <h2 class="section-title" data-en="News" data-ja="ニュース">News</h2>
+
+      <!--
+        Add a new entry any time by copying one <li> block below and editing
+        the date / tag / title / issuer / description. Newest entry goes first.
+      -->
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">2026.03</span>
+          <div class="news-body">
+            <span class="news-tag" data-en="Hackathon" data-ja="ハッカソン">Hackathon</span>
+            <p class="news-title" data-en="Winner — ImmerseGT with Tanix XRTrack" data-ja="ImmerseGT — Tanix XRTrack">Winner — ImmerseGT with Tanix XRTrack</p>
+            <p class="news-meta" data-en="ImmerseGT — Won with Tanix XRTrack at Georgia Tech's XR hackathon. Titled &quot;From Mystery to History,&quot; the project proposes recognizing artifacts at archaeological sites worldwide and reconstructing and visualizing their original forms." data-ja="ImmerseGT — Georgia TechのXRハッカソンにて、Tanix XRTrackでWinner。From Mystery to Historyと題し、世界中の遺跡現場において遺跡物を認識、原型を再構築し可視化するアイデアを提案。">ImmerseGT — Won with Tanix XRTrack at Georgia Tech's XR hackathon. Titled "From Mystery to History," the project proposes recognizing artifacts at archaeological sites worldwide and reconstructing and visualizing their original forms.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="award">
+      <h2 class="section-title" data-en="Award" data-ja="受賞">Award</h2>
+
+      <!--
+        Same pattern as News above — copy one <li> block and edit it to add
+        a new award. Newest entry goes first.
+      -->
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">2023.03</span>
+          <div class="news-body">
+            <p class="news-title" data-en="1st Prize — Mynavi Career Koshien 2022" data-ja="マイナビキャリア甲子園2022 優勝">1st Prize — Mynavi Career Koshien 2022</p>
+            <p class="news-meta" data-en="Mynavi Career Koshien — Awarded for proposing the most innovative and feasible business idea out of 2,318 teams: emobby, a cloud service that visualizes a city's individuality and creates spaces for youth." data-ja="マイナビキャリア甲子園 — 2318チーム中、最も革新的かつ実現可能なビジネスアイデアを提案したとして優勝。都市の個性を可視化し若者の居場所を創るクラウドサービス「emobby」をVisa Japanの協力のもと磯津恵凛とともに提案。">Mynavi Career Koshien — Awarded for proposing the most innovative and feasible business idea out of 2,318 teams: emobby, a cloud service that visualizes a city's individuality and creates spaces for youth.</p>
+          </div>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2021.08</span>
+          <div class="news-body">
+            <p class="news-title" data-en="Gold Medal — DOCOMOMO Japan" data-ja="DOCOMOMO Japan 金賞">Gold Medal — DOCOMOMO Japan</p>
+            <p class="news-meta" data-en="DOCOMOMO Japan — Participated in the Odomos Workshop organized by DOCOMOMO Japan, an organization dedicated to the preservation of modern architecture. Attended a wide range of lectures by figures from Fumihiko Maki to Wim Wenders, and received a Gold Medal as part of a team for a redesign proposal for Daikanyama Hillside Terrace." data-ja="DOCOMOMO Japan — 近代建築の保存を促進するDOCOMOMO Japan開催のOdomos Workshopに参加。槙文彦からヴィム・ベンダースまで幅広い講義を聴講し、代官山ヒルサイドテラスの建築再設計提案においてチームとしてゴールドメダルを受賞。">DOCOMOMO Japan — Participated in the Odomos Workshop organized by DOCOMOMO Japan, an organization dedicated to the preservation of modern architecture. Attended a wide range of lectures by figures from Fumihiko Maki to Wim Wenders, and received a Gold Medal as part of a team for a redesign proposal for Daikanyama Hillside Terrace.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="certificate">
+      <h2 class="section-title" data-en="Certificate" data-ja="資格・認定">Certificate</h2>
+
+      <!--
+        Same pattern as News above — copy one <li> block and edit it to add
+        a new certificate/program. Newest entry goes first.
+      -->
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">2024.07</span>
+          <div class="news-body">
+            <p class="news-title" data-en="Yanai Tadashi Foundation Scholar" data-ja="柳井正財団 海外奨学金プログラム">Yanai Tadashi Foundation Scholar</p>
+            <p class="news-meta" data-en="Yanai Tadashi Foundation — Granted full college funding, maximum $10,500 / year." data-ja="柳井正財団 — 年間最大$10,500の全額奨学金を授与。">Yanai Tadashi Foundation — Granted full college funding, maximum $10,500 / year.</p>
+          </div>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2023.08</span>
+          <div class="news-body">
+            <p class="news-title" data-en="University of Tokyo Global Science Campus" data-ja="東京大学 グローバルサイエンスキャンパス（GSC）">University of Tokyo Global Science Campus</p>
+            <p class="news-meta" data-en="The University of Tokyo — Global Science Campus (GSC) program. Under Professor Yuji Yoshimura, conducted research on urban homogenization and people's emotional homogenization." data-ja="東京大学 — グローバルサイエンスキャンパス（GSC）プログラム。吉村有司先生のもと、都市の均質化に関する定量的研究を実施。">The University of Tokyo — Global Science Campus (GSC) program. Under Professor Yuji Yoshimura, conducted research on urban homogenization and people's emotional homogenization.</p>
+          </div>
+        </li>
+        <li class="news-item">
+          <span class="news-date">2023.08</span>
+          <div class="news-body">
+            <p class="news-title" data-en="Selected for 100BANCH — emobby" data-ja="100BANCHに採択（emobby）">Selected for 100BANCH — emobby</p>
+            <p class="news-meta" data-en="100BANCH — emobby was selected as an incubated project." data-ja="100BANCH — 「emobby」がインキュベーションプロジェクトとして採択。">100BANCH — emobby was selected as an incubated project.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2 class="section-title" data-en="Contact" data-ja="コンタクト">Contact</h2>
+      <ul class="contact-list">
+        <li class="contact-item">
+          <span class="contact-label" data-en="Email" data-ja="メール">Email</span>
+          <a href="mailto:aiko.hayashi2005@gmail.com">aiko.hayashi2005@gmail.com</a>
+        </li>
+        <li class="contact-item">
+          <span class="contact-label" data-en="GitHub" data-ja="GitHub">GitHub</span>
+          <a href="https://github.com/Annetotoro" target="_blank">github.com/Annetotoro</a>
+        </li>
+        <li class="contact-item">
+          <span class="contact-label" data-en="CV" data-ja="CV">CV</span>
+          <a href="your-cv.pdf" target="_blank" data-en="Download" data-ja="ダウンロード">Download</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> Aiko Hayashi</span></footer>
+  <script src="main.js"></script>
+</body>
+</html>

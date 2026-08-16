@@ -5,22 +5,16 @@
    whitespace, no boxes/shadows/color blocking.
    ============================================================ */
 
-/* Self-hosted handwriting fonts (kept local, not on Google Fonts CDN,
-   so the "signature" look never depends on an external font host). */
+/* Self-hosted name font (kept local, not on Google Fonts CDN, so the
+   signature look never depends on an external font host). Fraunces is
+   a free stand-in for Melanzane (Playtype, paid) — both are quiet,
+   low-contrast "almost not a serif" display serifs. */
 @font-face {
-  font-family: 'Caveat';
+  font-family: 'Fraunces';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-display: swap;
-  src: url('fonts/caveat-700.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Yomogi';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('fonts/yomogi-400.woff2') format('woff2');
+  src: url('fonts/fraunces-600.woff2') format('woff2');
 }
 
 :root {
@@ -28,10 +22,10 @@
   --ink: #1a1a1a;
   --muted: #8a8a8a;
   --line: #e2e0dc;
-  --accent: #28397a; /* ink blue, sampled from reference doodle — used sparingly: handwritten name, tag labels, link hover */
+  --accent: #28397a; /* ink blue, sampled from reference doodle — used sparingly: name, tag labels, link hover */
   --sans: 'Helvetica Neue', Helvetica, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Arial, sans-serif;
   --mono: 'DM Mono', 'SFMono-Regular', Menlo, monospace;
-  --hand: 'Caveat', 'Yomogi', cursive;
+  --name: 'Fraunces', 'Noto Serif JP', serif;
   --max-width: 720px;
 }
 
@@ -72,9 +66,9 @@ a {
 }
 
 .nav-name {
-  font-family: var(--hand);
-  font-weight: 700;
-  font-size: 26px;
+  font-family: var(--name);
+  font-weight: 600;
+  font-size: 22px;
   color: var(--accent);
   letter-spacing: 0.01em;
   white-space: nowrap;
@@ -141,28 +135,27 @@ a {
 
 .hero {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 2rem;
   margin-bottom: 4.5rem;
 }
 
-.hero-photo {
-  flex: none;
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
+.hero-main-image {
+  width: 100%;
   border: 1px solid var(--line);
+}
+
+.hero-main-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-info {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .hero-text {
@@ -170,14 +163,30 @@ a {
   min-width: 0;
 }
 
+.portrait-image {
+  flex: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.portrait-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .page-title {
-  font-family: var(--hand);
-  font-weight: 700;
-  font-size: 64px;
+  font-family: var(--name);
+  font-weight: 600;
+  font-size: 56px;
   color: var(--accent);
   margin: 0 0 0.35rem;
-  letter-spacing: 0.01em;
-  line-height: 1.1;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
 }
 
 .subtitle {
@@ -199,7 +208,9 @@ a {
 
 /* ---------- News (append new <li class="news-item"> here) ---------- */
 
-.news {
+.news,
+.award,
+.certificate {
   margin-bottom: 4.5rem;
 }
 
@@ -270,6 +281,17 @@ a {
   margin: 0;
 }
 
+.news-title a {
+  color: inherit;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.news-title a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 /* ---------- Contact ---------- */
 
 .contact-list {
@@ -310,6 +332,256 @@ a {
   border-color: var(--accent);
 }
 
+/* ---------- Work grid (architecture.html and similar) ---------- */
+
+.work-layout {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.work-heading,
+.page-heading {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 34px;
+  letter-spacing: -0.01em;
+  margin: 0 0 3rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-thumb:hover {
+  border-color: var(--ink);
+}
+
+.work-title {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0.9rem 0 0.2rem;
+}
+
+.work-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---------- Photo grid (photography.html) ---------- */
+
+.photo-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.photo-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.photo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-thumb:hover {
+  border-color: var(--ink);
+}
+
+.photo-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0.5rem 0 0;
+}
+
+/* ---------- Blog post (individual article page) ---------- */
+
+.post-layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.post-back {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.post-back:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.post-title {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 38px;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+.post-date {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 3rem;
+}
+
+.post-body {
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.85;
+  max-width: 62ch;
+}
+
+.post-body p {
+  margin: 0 0 1.4rem;
+}
+
+.post-body h2 {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 21px;
+  margin: 2.5rem 0 1rem;
+}
+
+/* ---------- Project detail page (architecture project pages) ---------- */
+
+.project-layout {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.project-meta-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.project-meta-row .post-date {
+  margin-bottom: 0;
+}
+
+.project-tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.project-instructor-line {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 2.5rem;
+}
+
+.project-body {
+  max-width: 62ch;
+  margin-bottom: 3rem;
+}
+
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-gallery figure {
+  margin: 0;
+}
+
+.project-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+
+.project-gallery figcaption {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 0.6rem;
+}
+
 /* ---------- Footer ---------- */
 
 footer {
@@ -341,13 +613,35 @@ footer {
     margin-top: 0.75rem;
   }
 
-  .about-layout {
+  .about-layout,
+  .work-layout,
+  .photo-layout {
     padding: 3rem 1.25rem 4rem;
   }
 
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.25rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+  }
+
   .hero {
+    gap: 1.5rem;
+  }
+
+  .hero-info {
     flex-direction: column;
-    gap: 1.25rem;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .portrait-image {
+    width: 84px;
+    height: 84px;
   }
 
   .news-item {
@@ -366,5 +660,15 @@ footer {
   .contact-label {
     width: 52px;
     font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

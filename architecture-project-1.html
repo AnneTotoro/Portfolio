@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City in the City — Aiko Hayashi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav id="nav">
+    <a href="index.html" class="nav-name" data-en="Aiko Hayashi" data-ja="林 愛子">Aiko Hayashi</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" data-en="About" data-ja="About">About</a></li>
+        <li><a href="architecture.html" class="active" data-en="Architecture" data-ja="建築">Architecture</a></li>
+        <li><a href="research.html" data-en="Research" data-ja="研究">Research</a></li>
+        <li><a href="blog.html" data-en="Blog" data-ja="ブログ">Blog</a></li>
+        <li><a href="photography.html" data-en="Photography" data-ja="写真">Photography</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">JP</button>
+    </div>
+  </nav>
+
+  <main class="project-layout">
+    <a class="post-back" href="architecture.html" data-en="← Architecture" data-ja="← 建築">← Architecture</a>
+
+    <h1 class="post-title" data-en="City in the City" data-ja="City in the City">City in the City</h1>
+    <div class="project-meta-row">
+      <span class="post-date">2026 Summer</span>
+      <span class="project-tag" data-en="Studio project" data-ja="スタジオ課題">Studio project</span>
+    </div>
+    <p class="project-instructor-line" data-en="Instructor: Mark Cottle, Arnau Pascual, Nuria Arredondo" data-ja="指導教員: Mark Cottle, Arnau Pascual, Nuria Arredondo">Instructor: Mark Cottle, Arnau Pascual, Nuria Arredondo</p>
+
+    <div class="post-body project-body">
+      <p data-en="Paral·lel, once home to Theater Broadway, formed a Society of Room through its row of theaters and the terrace seating spilling out onto the street. As theater culture declined over time, Paral·lel — which still shapes part of Barcelona today as the boundary between three districts of differing urban grids — has lost that Room of Agreement. Like a city within the city, this building takes the form of two overlapping spirals: a movement that draws people from the street into the architecture, and in doing so, through a bodily gesture recalling Montjuïc and the funerary rituals once held there, brings them down onto the rooftop as a second ground." data-ja="かつてTheater Broadwayであった Paral·lel は、並ぶ劇場と通りに飛び出すテラス席が Society of Room を形成していた。時間の経過とともに Theater 文化は衰退し、異なる Urban Grid を持つ３つの地区の境目としていまもバルセロナの一部を形作る Paral·lel は、現在 Room of Agreement を喪失している。この建築は、City in the city のように、ふたつの Spiral が重なった形により、街から建築へと人のムーブメントを呼び込み、その過程で Montjuïc やかつての弔いの儀式を思い起こさせる身体的動作を伴って、第２の Ground である Rooftop へと降り立つことを実現する。">Paral·lel, once home to Theater Broadway, formed a Society of Room through its row of theaters and the terrace seating spilling out onto the street. As theater culture declined over time, Paral·lel — which still shapes part of Barcelona today as the boundary between three districts of differing urban grids — has lost that Room of Agreement. Like a city within the city, this building takes the form of two overlapping spirals: a movement that draws people from the street into the architecture, and in doing so, through a bodily gesture recalling Montjuïc and the funerary rituals once held there, brings them down onto the rooftop as a second ground.</p>
+    </div>
+
+    <!--
+      Add more images any time by copying one <figure> block below.
+      Images are shown full-width and uncropped, in order.
+    -->
+    <div class="project-gallery">
+      <figure>
+        <img src="images/architecture/model-photo.jpg" alt="Physical model">
+        <figcaption data-en="Physical model" data-ja="模型写真">Physical model</figcaption>
+      </figure>
+      <figure>
+        <img src="images/architecture/process-sketches.jpg" alt="Process sketches">
+        <figcaption data-en="Process sketches" data-ja="プロセススケッチ">Process sketches</figcaption>
+      </figure>
+      <figure>
+        <img src="images/architecture/axonometric.jpg" alt="Axonometric diagram">
+        <figcaption data-en="Axonometric diagram" data-ja="アクソメ図">Axonometric diagram</figcaption>
+      </figure>
+      <figure>
+        <img src="images/architecture/section-elevation.jpg" alt="Section / elevation">
+        <figcaption data-en="Section / elevation" data-ja="断面図・立面図">Section / elevation</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer><span>© <span id="year"></span> Aiko Hayashi</span></footer>
+  <script src="main.js"></script>
+</body>
+</html>

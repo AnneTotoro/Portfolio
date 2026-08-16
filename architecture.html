@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architecture — Aiko Hayashi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav id="nav">
+    <a href="index.html" class="nav-name" data-en="Aiko Hayashi" data-ja="林 愛子">Aiko Hayashi</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" data-en="About" data-ja="About">About</a></li>
+        <li><a href="architecture.html" class="active" data-en="Architecture" data-ja="建築">Architecture</a></li>
+        <li><a href="research.html" data-en="Research" data-ja="研究">Research</a></li>
+        <li><a href="blog.html" data-en="Blog" data-ja="ブログ">Blog</a></li>
+        <li><a href="photography.html" data-en="Photography" data-ja="写真">Photography</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">JP</button>
+    </div>
+  </nav>
 
+  <main class="work-layout">
+    <h1 class="work-heading" data-en="Architecture" data-ja="建築">Architecture</h1>
+
+    <!--
+      Add a new project any time by copying one <li> block below and
+      editing it. Newest project goes first. Replace the image inside
+      .work-thumb with a real <img src="..." alt="..."> once you have
+      photos/renders — until then it just shows a placeholder box.
+    -->
+    <ul class="work-grid">
+      <li class="work-card">
+        <a class="work-thumb" href="architecture-project-1.html">
+          <img src="images/architecture/process-sketches.jpg" alt="City in the City">
+        </a>
+        <p class="work-title" data-en="City in the City" data-ja="City in the City">City in the City</p>
+        <p class="work-meta" data-en="2026 Summer — Studio project" data-ja="2026年夏 — スタジオ課題">2026 Summer — Studio project</p>
+      </li>
+      <li class="work-card">
+        <a class="work-thumb" href="#">
+          <span data-en="Image" data-ja="画像">Image</span>
+        </a>
+        <p class="work-title" data-en="Project Title" data-ja="プロジェクト名">Project Title</p>
+        <p class="work-meta" data-en="2025 — Studio project" data-ja="2025年 — スタジオ課題">2025 — Studio project</p>
+      </li>
+      <li class="work-card">
+        <a class="work-thumb" href="#">
+          <span data-en="Image" data-ja="画像">Image</span>
+        </a>
+        <p class="work-title" data-en="Project Title" data-ja="プロジェクト名">Project Title</p>
+        <p class="work-meta" data-en="2024 — Competition" data-ja="2024年 — コンペ">2024 — Competition</p>
+      </li>
+    </ul>
+  </main>
+
+  <footer><span>© <span id="year"></span> Aiko Hayashi</span></footer>
+  <script src="main.js"></script>
+</body>
+</html>

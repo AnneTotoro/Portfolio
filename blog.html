@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Aiko Hayashi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav id="nav">
+    <a href="index.html" class="nav-name" data-en="Aiko Hayashi" data-ja="林 愛子">Aiko Hayashi</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" data-en="About" data-ja="About">About</a></li>
+        <li><a href="architecture.html" data-en="Architecture" data-ja="建築">Architecture</a></li>
+        <li><a href="research.html" data-en="Research" data-ja="研究">Research</a></li>
+        <li><a href="blog.html" class="active" data-en="Blog" data-ja="ブログ">Blog</a></li>
+        <li><a href="photography.html" data-en="Photography" data-ja="写真">Photography</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">JP</button>
+    </div>
+  </nav>
+
+  <main class="about-layout">
+    <h1 class="page-heading" data-en="Blog" data-ja="ブログ">Blog</h1>
+
+    <!--
+      Add a new post any time by copying one <li> block below and editing
+      the date / title / excerpt / link. Newest post goes first. Write the
+      full post itself as its own HTML file (blog-my-next-phase.html is a
+      starting template — duplicate it for each new post).
+    -->
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">2026.04</span>
+        <div class="news-body">
+          <p class="news-title"><a href="blog-my-next-phase.html" data-en="My Next Phase" data-ja="次のフェーズへ">My Next Phase</a></p>
+          <p class="news-meta" data-en="A short placeholder post — replace this excerpt and link it to your own writing." data-ja="サンプルの投稿です — この抜粋を実際の文章に差し替えてください。">A short placeholder post — replace this excerpt and link it to your own writing.</p>
+        </div>
+      </li>
+    </ul>
+  </main>
+
+  <footer><span>© <span id="year"></span> Aiko Hayashi</span></footer>
+  <script src="main.js"></script>
+</body>
+</html>

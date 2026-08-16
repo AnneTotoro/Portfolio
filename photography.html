@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography — Aiko Hayashi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav id="nav">
+    <a href="index.html" class="nav-name" data-en="Aiko Hayashi" data-ja="林 愛子">Aiko Hayashi</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" data-en="About" data-ja="About">About</a></li>
+        <li><a href="architecture.html" data-en="Architecture" data-ja="建築">Architecture</a></li>
+        <li><a href="research.html" data-en="Research" data-ja="研究">Research</a></li>
+        <li><a href="blog.html" data-en="Blog" data-ja="ブログ">Blog</a></li>
+        <li><a href="photography.html" class="active" data-en="Photography" data-ja="写真">Photography</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">JP</button>
+    </div>
+  </nav>
+
+  <main class="photo-layout">
+    <h1 class="page-heading" data-en="Photography" data-ja="写真">Photography</h1>
+
+    <!--
+      Add a new photo any time by copying one <li> block below. Replace
+      the <span> inside .photo-thumb with a real <img src="..." alt="...">
+      once you have files — until then it just shows a placeholder box.
+      Newest photo goes first; renumber the .photo-num labels if you want
+      them to stay sequential (they're just plain text, not automatic).
+    -->
+    <ul class="photo-grid">
+      <li class="photo-cell">
+        <a class="photo-thumb" href="#"><span data-en="Image" data-ja="画像">Image</span></a>
+        <p class="photo-num">01</p>
+      </li>
+      <li class="photo-cell">
+        <a class="photo-thumb" href="#"><span data-en="Image" data-ja="画像">Image</span></a>
+        <p class="photo-num">02</p>
+      </li>
+      <li class="photo-cell">
+        <a class="photo-thumb" href="#"><span data-en="Image" data-ja="画像">Image</span></a>
+        <p class="photo-num">03</p>
+      </li>
+      <li class="photo-cell">
+        <a class="photo-thumb" href="#"><span data-en="Image" data-ja="画像">Image</span></a>
+        <p class="photo-num">04</p>
+      </li>
+      <li class="photo-cell">
+        <a class="photo-thumb" href="#"><span data-en="Image" data-ja="画像">Image</span></a>
+        <p class="photo-num">05</p>
+      </li>
+      <li class="photo-cell">
+        <a class="photo-thumb" href="#"><span data-en="Image" data-ja="画像">Image</span></a>
+        <p class="photo-num">06</p>
+      </li>
+      <li class="photo-cell">
+        <a class="photo-thumb" href="#"><span data-en="Image" data-ja="画像">Image</span></a>
+        <p class="photo-num">07</p>
+      </li>
+      <li class="photo-cell">
+        <a class="photo-thumb" href="#"><span data-en="Image" data-ja="画像">Image</span></a>
+        <p class="photo-num">08</p>
+      </li>
+    </ul>
+  </main>
+
+  <footer><span>© <span id="year"></span> Aiko Hayashi</span></footer>
+  <script src="main.js"></script>
+</body>
+</html>

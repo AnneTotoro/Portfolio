@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Next Phase — Aiko Hayashi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav id="nav">
+    <a href="index.html" class="nav-name" data-en="Aiko Hayashi" data-ja="林 愛子">Aiko Hayashi</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" data-en="About" data-ja="About">About</a></li>
+        <li><a href="architecture.html" data-en="Architecture" data-ja="建築">Architecture</a></li>
+        <li><a href="research.html" data-en="Research" data-ja="研究">Research</a></li>
+        <li><a href="blog.html" class="active" data-en="Blog" data-ja="ブログ">Blog</a></li>
+        <li><a href="photography.html" data-en="Photography" data-ja="写真">Photography</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">JP</button>
+    </div>
+  </nav>
+
+  <main class="post-layout">
+    <a class="post-back" href="blog.html" data-en="← Blog" data-ja="← ブログ">← Blog</a>
+
+    <h1 class="post-title" data-en="My Next Phase" data-ja="次のフェーズへ">My Next Phase</h1>
+    <span class="post-date">2026.04</span>
+
+    <!--
+      This whole file is a template — duplicate it for each new post
+      (e.g. blog-my-second-post.html), then update the <title>, the
+      post-title / post-date above, and the paragraphs below. Remember
+      to add a matching entry in blog.html so it shows up in the list.
+    -->
+    <div class="post-body">
+      <p data-en="This is placeholder text standing in for your post. Replace this paragraph — and the ones below — with your own writing." data-ja="これはサンプルの本文です。この段落と、以下の段落をあなた自身の文章に差し替えてください。">This is placeholder text standing in for your post. Replace this paragraph — and the ones below — with your own writing.</p>
+
+      <p data-en="Keep paragraphs short and give each one its own &lt;p&gt; tag — the spacing between them is handled automatically." data-ja="段落は短めにして、それぞれを&lt;p&gt;タグで分けてください — 段落間の余白は自動で調整されます。">Keep paragraphs short and give each one its own &lt;p&gt; tag — the spacing between them is handled automatically.</p>
+
+      <p data-en="If a post needs a subheading partway through, use an &lt;h2&gt; tag — it will pick up matching type automatically." data-ja="途中で見出しが必要な場合は&lt;h2&gt;タグを使ってください — 見た目は自動で揃います。">If a post needs a subheading partway through, use an &lt;h2&gt; tag — it will pick up matching type automatically.</p>
+    </div>
+  </main>
+
+  <footer><span>© <span id="year"></span> Aiko Hayashi</span></footer>
+  <script src="main.js"></script>
+</body>
+</html>
